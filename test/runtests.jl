@@ -2,7 +2,6 @@
 import BS
 using Test
 
-
 @testset "BS Price" begin
     @testset "no dividends" begin
 
@@ -74,6 +73,9 @@ end
 
         @test BS.impvol(BS.EuropeanCall(), 4.12, s, k, t, r) ≈ 0.099644799474057
         @test BS.impvol(BS.EuropeanPut(), 4.12, s, k, t, r) ≈ 0.3860639608047352
+
+        @test BS.impvol(BS.EuropeanCall(), 17, s, k, t, r) ≈ 1.0332662114853954
+        @test BS.impvol(BS.EuropeanPut(), 13.15, s, k, t, r) ≈ 1.0299775738714554
     end
 
     @testset "dividends q" begin
@@ -125,3 +127,8 @@ end
         @test BS.rho(BS.EuropeanPut(), s, k, t, r, sigma) ≈ -9.95716587794938
     end
 end
+
+@testset "Examples" begin
+    include("examples.jl")
+end
+
