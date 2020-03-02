@@ -1,9 +1,19 @@
 name = "BS"
 uuid = "575d9c84-3253-11e9-2c3e-c39e6860200c"
 authors = ["Felipe Noronha <felipenoris@gmail.com>"]
-version = "0.1.0"
+version = "0.1.1-dev"
 
 [deps]
 Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
 Roots = "f2b01f46-fcfa-551c-844a-d8ac1e96c665"
+
+[compat]
+julia = "1"
+Roots = "1.0"
+Distributions = "0.22"
+
+[extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
