@@ -59,3 +59,8 @@ t = 0.5
 @test BS.impvol(BS.EuropeanCall(), 4.12, s, k, t, r) ≈ 0.1135753892186858
 @test BS.impvol(BS.EuropeanPut(), 4.12, s, k, t, r) ≈ 0.5246966268060681
 ```
+
+# Development status
+
+This repo is a sketch only and not intended for new developments. No PRs will be accepted.
+Feel free to copy the source code for your project.
